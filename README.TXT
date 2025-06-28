@@ -1,0 +1,145 @@
+
+                Para iniciar el proyecto BACKEND:
+                            npm start
+
+                Para iniciar el proyecto FRONTEND: 
+                            npm install  
+                            npm run dev
+
+
+ RUTAS Y EJEMPLOS DE JSON PARA LA API:
+
+==========================
+USUARIOS (/int/user)
+==========================
+
+**Crear usuario**
+POST http://localhost:6001/int/user/save
+{
+  "nombre": "Javi",
+  "apellidos": "Sandoval",
+  "password": "javi",
+  "role": "gerente",
+  "telefono": "6184454776",
+  "direccion": "Divi Norte #456",
+  "status": "activo"
+}
+
+**Login**
+POST http://localhost:6001/int/user/login
+{
+  "nombre": "Javi",
+  "password": "javi"
+}
+
+**Actualizar usuario**
+PATCH http://localhost:6001/int/user/update/:id
+{
+  "nombre": "Carlos",
+  "apellidos": "Ramírez",
+  "password": "nuevoPassword123",
+  "role": "gerente",
+  "telefono": "5559876543",
+  "direccion": "Calle Nueva #456",
+  "status": "activo"
+}
+
+**Eliminar usuario**
+DELETE http://localhost:6001/int/user/delete/:id
+
+==========================
+PRODUCTOS (/int/products)
+==========================
+
+**Crear producto**
+POST http://localhost:6001/int/products/save
+{
+  "_id": 1,
+  "nombre": "Torta de Jamón",
+  "precio": 35,
+  "tipo": "torta",
+  "status": "activo"
+}
+
+**Actualizar producto**
+PATCH http://localhost:6001/int/products/update/:id
+{
+  "nombre": "Torta de Pierna",
+  "precio": 40,
+  "tipo": "torta",
+  "status": "activo"
+}
+
+**Eliminar producto**
+DELETE http://localhost:6001/int/products/delete/:id
+
+==========================
+INVENTARIO/STOCK (/int/stock)
+==========================
+
+**Crear producto de inventario**
+POST http://localhost:6001/int/stock/save
+{
+  "_id": 1,
+  "producto": "Torta de Jamón",
+  "cantidad": 50,
+  "unidad": "piezas",
+  "status": "activo"
+}
+
+**Actualizar producto de inventario**
+PATCH http://localhost:6001/int/stock/update/:id
+{
+  "producto": "Torta de Jamón",
+  "cantidad": 60,
+  "unidad": "piezas",
+  "status": "activo"
+}
+
+**Eliminar producto de inventario**
+DELETE http://localhost:6001/int/stock/delete/:id
+
+==========================
+VENTAS (/int/sells)
+==========================
+
+**Crear venta**
+POST http://localhost:6001/int/sells/save
+{
+  "productos": [
+    {
+      "producto_id": 1,
+      "nombre": "Torta de Jamón",
+      "cantidad": 2,
+      "precio_unitario": 35,
+      "subtotal": 70
+    },
+    {
+      "producto_id": 2,
+      "nombre": "Agua de Horchata",
+      "cantidad": 1,
+      "precio_unitario": 20,
+      "subtotal": 20
+    }
+  ],
+  "total": 90,
+  "vendedor_id": 1,
+  "status": "activo"
+}
+
+**Actualizar venta**
+PATCH http://localhost:6001/int/sells/update/:id
+{
+  "productos": [
+    {
+      "producto_id": 1,
+      "nombre": "Torta de Jamón",
+      "cantidad": 3,
+      "precio_unitario": 35,
+      "subtotal": 105
+    }
+  ],
+  "total": 105,
+  "vendedor_id": 1,
+  "status": "activo"
+}
