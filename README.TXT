@@ -1,5 +1,4 @@
-
-                Para iniciar el proyecto BACKEND:
+Para iniciar el proyecto BACKEND:
                             npm start
 
                 Para iniciar el proyecto FRONTEND: 
@@ -12,6 +11,9 @@
 ==========================
 USUARIOS (/int/user)
 ==========================
+
+**Obtener todos los usuarios**
+GET http://localhost:6001/int/user/all
 
 **Crear usuario**
 POST http://localhost:6001/int/user/save
@@ -51,6 +53,12 @@ DELETE http://localhost:6001/int/user/delete/:id
 PRODUCTOS (/int/products)
 ==========================
 
+**Obtener todos los productos**
+GET http://localhost:6001/int/products/all
+
+**Obtener producto por ID**
+GET http://localhost:6001/int/products/find/:id
+
 **Crear producto**
 POST http://localhost:6001/int/products/save
 {
@@ -77,6 +85,12 @@ DELETE http://localhost:6001/int/products/delete/:id
 INVENTARIO/STOCK (/int/stock)
 ==========================
 
+**Obtener todo el inventario**
+GET http://localhost:6001/int/stock/all
+
+**Obtener producto de inventario por ID**
+GET http://localhost:6001/int/stock/find/:id
+
 **Crear producto de inventario**
 POST http://localhost:6001/int/stock/save
 {
@@ -102,6 +116,12 @@ DELETE http://localhost:6001/int/stock/delete/:id
 ==========================
 VENTAS (/int/sells)
 ==========================
+
+**Obtener todas las ventas**
+GET http://localhost:6001/int/sells/all
+
+**Obtener venta por ID**
+GET http://localhost:6001/int/sells/find/:id
 
 **Crear venta**
 POST http://localhost:6001/int/sells/save
@@ -143,3 +163,5 @@ PATCH http://localhost:6001/int/sells/update/:id
   "vendedor_id": 1,
   "status": "activo"
 }
+
+**Eliminar
