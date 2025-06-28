@@ -164,4 +164,5 @@ PATCH http://localhost:6001/int/sells/update/:id
   "status": "activo"
 }
 
-**Eliminar
+**Eliminar venta**
+DELETE http://localhost:6001/int/sells/delete/:id
