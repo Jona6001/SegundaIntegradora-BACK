@@ -21,6 +21,7 @@ POST http://localhost:6001/int/user/save
   "nombre": "Javi",
   "apellidos": "Sandoval",
   "password": "javi",
+  "email": "javi@ejemplo.com",
   "role": "gerente",
   "telefono": "6184454776",
   "direccion": "Divi Norte #456",
@@ -166,3 +167,28 @@ PATCH http://localhost:6001/int/sells/update/:id
 
 **Eliminar venta**
 DELETE http://localhost:6001/int/sells/delete/:id
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Cosas a cambiar 
+Agregar = Recuperar contrasena
+
+Formularios en Modales
+Quitar seleccion de usuario
+
+
+Documento cap 3 
+-- Cambiar = Stake Holders 
